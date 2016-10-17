@@ -1,0 +1,21 @@
+Source: rx-tools
+Priority: optional
+Section: libs
+Maintainer: Debian Hamradio Maintainers <debian-hams@lists.debian.org>
+Uploaders: Petter Reinholdtsen <pere@debian.org>
+Build-Depends: debhelper (>= 9~)
+ , cmake
+ , libsoapysdr-dev
+Standards-Version: 3.9.8
+Homepage: https://github.com/rxseger/rx_tools
+#Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/rx-tools.git
+#Vcs-Git: git://anonscm.debian.org/collab-maint/rx-tools.git
+
+Package: rx-tools
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Software defined radio tools
+ Provide rx_fm, rx_power, and rx_sdr tools for receiving data from
+ SDRs, based on rtl_fm, rtl_power, and rtl_sdr from librtlsdr, but
+ using the SoapySDR vendor-neutral SDR support library instead,
+ intended to support a wider range of devices than RTL-SDR.
